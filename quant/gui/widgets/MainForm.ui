@@ -32,6 +32,12 @@
       <enum>Qt::Horizontal</enum>
      </property>
      <widget class="QSplitter" name="splitter_v">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="minimumSize">
        <size>
         <width>200</width>
@@ -42,6 +48,12 @@
        <enum>Qt::Vertical</enum>
       </property>
       <widget class="QTabWidget" name="tabWidget">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="minimumSize">
         <size>
          <width>100</width>
@@ -223,6 +235,12 @@
        </widget>
       </widget>
       <widget class="QTextEdit" name="textEdit_Log">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>1</verstretch>
+        </sizepolicy>
+       </property>
        <property name="minimumSize">
         <size>
          <width>0</width>
@@ -240,7 +258,14 @@
        </property>
       </widget>
      </widget>
-     <widget class="WebEngineView" name="webEngineView" native="true"/>
+     <widget class="WebEngineView" name="webEngineView" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+        <horstretch>1</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
     </widget>
    </item>
   </layout>

@@ -4,7 +4,7 @@ from multiprocessing import freeze_support
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication
 
-from gui.MainForm import MainForm
+from quant.gui.MainForm import MainForm
 
 if __name__ == '__main__':
 

@@ -1,13 +1,17 @@
 import json
 import os
+import sys
 import time
 
 from loguru import logger
 
 __version__ = "0.0.3"
 
-ROOT_DIR = os.path.abspath('.')
-CONFIG_PATH = os.path.dirname(os.path.abspath(__file__))
+if getattr(sys, 'frozen', False):
+    CONFIG_PATH = os.path.dirname(sys.executable)
+else:
+    CONFIG_PATH = os.path.dirname(__file__)
+
 
 def init_log():
 
@@ -31,7 +35,7 @@ def config_load(config_file) -> dict:
         with open(config_file, 'r', encoding='utf-8') as f:
             return json.load(f)
     else:
-        raise FileNotFoundError(f'cannot find config file: {config_file}')
+        logger.info(f'cannot load config file: {config_file}')
 
 
 def init_config() -> dict:
